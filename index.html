@@ -13,21 +13,21 @@
         <form class="[ flow ]" id="form-recipe" autocomplete="off">
             <div class="[ form-group ] [ flow ]">
                 <label for="title">Nombre</label>
-                <input type="text" name="title" class="[ form-control ] [ color-gray ]"/>
+                <input id="nombre" type="text" name="title" class="[ form-control ] [ color-gray ]"/>
             </div>
             <div class="[ form-group ] [ flow ]">
                 <label for="img_url">URL Imagen</label>
-                <input type="text" name="img_url" class="[ form-control ] [ color-gray ]"/>
+                <input id="URL_imagen" type="text" name="img_url" class="[ form-control ] [ color-gray ]"/>
             </div>
             <div class="[ form-group ] [ flow ]">
                 <label for="description">Descripción</label>
-                <textarea name="description" class="[ form-control ] [ color-gray ]" rows="5"></textarea>
+                <textarea id="desripcion" name="description" class="[ form-control ] [ color-gray ]" rows="5"></textarea>
             </div>
             <div class="[ form-group ] [ flow ]">
                 <label for="title">Agregar ingrediente</label>
                 <div class="input-group">
                     <input type="text" id="ingredient-name" class="[ form-control ] [ color-gray ]"/>
-                    <button class="btn" type="button" data-state="white" id="newIng">+</button>
+                    <button class="btn" type="button" data-state="white" id="newIng" onclick="guardar_ingrediente(), actualizar_Lista()">+</button>
                 </div>
             </div>
             <div>
@@ -39,7 +39,7 @@
                 </ul>
             </div>
             <div class="[ form-group ]">
-                <button class="btn" type="submit" data-state="secondary">GUARDAR</button>
+                <button id="guardar_boton" class="btn" type="submit" data-state="secondary" onclick="guardar_receta(), actualizar_lista_recetas()">GUARDAR</button>
             </div>
         </form>
     </section>
